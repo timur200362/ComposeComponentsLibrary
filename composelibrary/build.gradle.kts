@@ -51,14 +51,14 @@ afterEvaluate {
             create<MavenPublication>("mavenRelease") {
                 groupId = "com.example"
                 artifactId = "composelibrary"
-                version = "1.0.0"
+                version = "1.0.3"
 
                 from(components["release"])
             }
             create<MavenPublication>("mavenDebug") {
                 groupId = "com.example"
                 artifactId = "composelibrary"
-                version = "1.0.0"
+                version = "1.0.3"
 
                 from(components["debug"])
             }
