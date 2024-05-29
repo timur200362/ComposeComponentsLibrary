@@ -14,7 +14,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.appforlibrary.ui.theme.AppForLibraryTheme
-import com.example.composelibrary.TestElement
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,10 +21,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppForLibraryTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                    TestElement()
+                    //TestElement()
                 }
             }
         }

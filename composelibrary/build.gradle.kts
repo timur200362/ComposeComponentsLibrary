@@ -32,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -49,16 +49,16 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("mavenRelease") {
-                groupId = "com.example"
-                artifactId = "composelibrary"
-                version = "1.0.3"
+                groupId = "com.github.timur200362"
+                artifactId = "ComposeComponentsLibrary"
+                version = "1.0.4"
 
                 from(components["release"])
             }
             create<MavenPublication>("mavenDebug") {
-                groupId = "com.example"
-                artifactId = "composelibrary"
-                version = "1.0.3"
+                groupId = "com.github.timur200362"
+                artifactId = "ComposeComponentsLibrary"
+                version = "1.0.4"
 
                 from(components["debug"])
             }
@@ -89,17 +89,6 @@ dependencies {
     implementation(libs.lifecycle.compose.compiler)
 
     implementation(libs.navigation.compose)
-
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.logging)
-    implementation(libs.koin)
-    implementation(libs.koin.compose)
-    implementation(libs.koin.test)
-
-    implementation(libs.retrofit.core)
-    implementation(libs.retrofit.kotlin.serialization)
-    implementation(libs.kotlinx.serialization.json)
-    implementation(libs.retrofit.json.converter)
 
     implementation(libs.coil)
     implementation(libs.coil.svg)

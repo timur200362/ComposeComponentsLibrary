@@ -18,7 +18,7 @@ composeRuntime="1.6.7"
 material = "1.12.0"
 foundation = "1.6.7"
 compose = "1.6.7"
-compose-components = "1.0.0"
+compose-components = "1.0.4"
 androidxMaterial = "1.6.7"
 
 androidxAppCompat = "1.6.1"
@@ -132,7 +132,7 @@ androidx-material3-android = { group = "androidx.compose.material3", name = "mat
 androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex"}
 material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3AndroidVersion" }
 
-composeComponents = { group = "com.example", name = "composelibrary", version.ref = "compose-components" }
+composeComponents = { group = "com.github.timur200362", name = "ComposeComponentsLibrary", version.ref = "compose-components" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
