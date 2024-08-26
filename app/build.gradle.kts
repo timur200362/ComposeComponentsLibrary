@@ -81,6 +81,6 @@ dependencies {
     androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
 
-    //implementation(libs.composeComponents)
+    implementation(libs.composeComponents)
 
 }
