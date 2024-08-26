@@ -74,13 +74,12 @@ dependencies {
     implementation(libs.coil)
     implementation(libs.coil.svg)
     implementation(libs.coil.compose)
+    implementation(project(":composelibrary"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
-
-    implementation(libs.composeComponents)
 
 }
