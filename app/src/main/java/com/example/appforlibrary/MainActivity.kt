@@ -75,11 +75,11 @@ fun MainScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(16.dp))
 
         if (isShowingCardItems1) {
-            CardList(items = cardItems1, backgroundColor = Color.LightGray) { title, description ->
+            CardList(items = cardItems1) { title, description ->
                 navController.navigate("description/$title/$description")
             }
         } else {
-            CardList(items = cardItems2, backgroundColor = Color.LightGray) { title, description ->
+            CardList(items = cardItems2) { title, description ->
                 navController.navigate("description/$title/$description")
             }
         }

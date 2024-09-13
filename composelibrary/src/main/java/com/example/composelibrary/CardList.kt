@@ -11,11 +11,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CardList(items: List<Pair<String, String>>, backgroundColor: Color, onItemClick: (String, String) -> Unit) {
+fun CardList(items: List<Pair<String, String>>, onItemClick: (String, String) -> Unit) {
     LazyColumn {
         itemsIndexed(items) { index, item ->
             Card(
