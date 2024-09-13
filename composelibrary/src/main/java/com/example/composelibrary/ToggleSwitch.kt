@@ -6,15 +6,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun ToggleSwitch(isChecked: Boolean, onToggle: (Boolean) -> Unit) {
+fun ToggleSwitch(firstColor: Color, secondColor: Color, isChecked: Boolean, onToggle: (Boolean) -> Unit) {
     Switch(
         checked = isChecked,
         onCheckedChange = {
             onToggle(it) // Вызываем обратный вызов при изменении состояния
         },
         colors = SwitchDefaults.colors(
-            checkedThumbColor = Color.Green,
-            uncheckedThumbColor = Color.Red
+            checkedThumbColor = firstColor,
+            uncheckedThumbColor = secondColor
         )
     )
 }

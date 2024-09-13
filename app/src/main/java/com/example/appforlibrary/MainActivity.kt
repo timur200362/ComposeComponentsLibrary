@@ -15,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
@@ -52,9 +53,7 @@ class MainActivity : ComponentActivity() {
 fun MainScreen(navController: NavController) {
     var cardItems1 by remember { mutableStateOf(
         listOf(
-            "Item 1" to "Description of Item 1",
-            "Item 2" to "Description of Item 2",
-            "Item 3" to "Description of Item 3"
+            "Cat" to "A cat is a graceful and independent creature known for its soft fur and expressive eyes. It has an amazing ability to hunt, making it an excellent catcher of mice and other small animals. Cats enjoy spending time exploring their surroundings and playing with toys. They often show affection to their owners by purring and rubbing against their legs as a sign of love. Despite their independence, cats can be very social and find joy in the company of people and other animals."
         )
     ) }
 
@@ -67,18 +66,18 @@ fun MainScreen(navController: NavController) {
     var isShowingCardItems1 by remember { mutableStateOf(true) }
 
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-        ToggleSwitch(isChecked = isShowingCardItems1) { isChecked ->
+        ToggleSwitch(Color.Red, Color.Green, isChecked = isShowingCardItems1) { isChecked ->
             isShowingCardItems1 = isChecked
         }
 
         Spacer(modifier = Modifier.height(16.dp))
 
         if (isShowingCardItems1) {
-            CardList(items = cardItems1) { title, description ->
+            CardList(items = cardItems1, backgroundColor = Color.Red) { title, description ->
                 navController.navigate("description/$title/$description")
             }
         } else {
-            CardList(items = cardItems2) { title, description ->
+            CardList(items = cardItems2, backgroundColor = Color.Blue) { title, description ->
                 navController.navigate("description/$title/$description")
             }
         }
